@@ -1,0 +1,68 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const links = ['About', 'Projects', 'Team', 'Join'];
+
+  return (
+    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center mix-blend-difference text-white">
+      <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-2xl font-display font-bold tracking-tighter"
+      >
+        TURING<span className="text-turing-yellow">.</span>
+      </motion.div>
+
+      <div className="hidden md:flex gap-8">
+        {links.map((link, i) => (
+          <motion.a
+            key={link}
+            href={`#${link.toLowerCase()}`}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            className="uppercase text-sm font-bold tracking-widest hover:text-turing-yellow transition-colors relative group"
+          >
+            {link}
+            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-turing-yellow transition-all group-hover:w-full" />
+          </motion.a>
+        ))}
+      </div>
+
+      <div className="md:hidden">
+        <button onClick={toggleMenu} className="focus:outline-none">
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="fixed inset-0 bg-turing-black z-40 flex flex-col items-center justify-center gap-8"
+        >
+          {links.map((link) => (
+            <a 
+              key={link} 
+              href={`#${link.toLowerCase()}`} 
+              onClick={toggleMenu}
+              className="text-4xl font-display font-bold uppercase hover:text-turing-yellow"
+            >
+              {link}
+            </a>
+          ))}
+        </motion.div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
