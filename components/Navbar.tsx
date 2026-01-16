@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const links = ['About', 'Projects', 'Team', 'Join'];
+  const links = ['About', 'Events', 'Team', 'Join'];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center mix-blend-difference text-white">

@@ -20,9 +20,9 @@ const Hero: React.FC = () => {
       <video
         autoPlay
         muted
-        loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 opacity-100"
+        preload="auto"
+        className="absolute inset-0 w-full h-full z-0 opacity-50"
       >
         <source src="/video1.mp4" type="video/mp4" />
       </video>
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
              transition={{ delay: 0.5, duration: 0.8 }}
              className="text-right"
           >
-             <span className="block font-display text-4xl font-bold text-turing-yellow">EST. 2024</span>
+             <span className="block font-display text-4xl font-bold text-turing-yellow">EST. 2017</span>
              <span className="block text-xs uppercase tracking-widest text-gray-500">College Club // Tech Division</span>
           </motion.div>
         </motion.div>

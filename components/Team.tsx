@@ -5,7 +5,7 @@ import { DraggableCardBody, DraggableCardContainer } from './ui/draggable-card';
 
 const coreMembers = [
   { name: "Madhav Jaju", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPbaOBDhz5hfuXwZqIWCSsnFy94QaerOAH7tlN" },
-  { name: "Shobhit Luthra", role: "Core Member", img: "https://picsum.photos/400/400?random=2" },
+  { name: "Shobhit Luthra", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPjKSG3p0mdOTG76rLRzK1H3hCwqXpIFyWki5Z4" },
   { name: "Paravi Bhatia", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPcnSAe0wDm5dWgzJYZtV9ys1ArXHaETRSLNI2" },
 ];
 

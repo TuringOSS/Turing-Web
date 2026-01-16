@@ -5,9 +5,9 @@ import { ArrowUpRight } from 'lucide-react';
 
 const events: Project[] = [
   { id: 1, title: "AI Workshop", category: "Workshop", image: "/Ai.jpeg", year: "2024" },
-  { id: 2, title: "AI Showcase", category: "Showcase", image: "/AI2.jpeg", year: "2024" },
-  { id: 3, title: "Hack Night", category: "Hackathon", image: "/Ai.jpeg", year: "2024" },
-  { id: 4, title: "Dev Summit", category: "Conference", image: "/AI2.jpeg", year: "2023" },
+  { id: 2, title: "Robo Race", category: "Showcase", image: "/AI2.jpeg", year: "2025" },
+  { id: 3, title: "Hack Night", category: "Hackathon", image: "/Ai.jpeg", year: "2025" },
+  { id: 4, title: "TECHNEX", category: "Multi Event Hack", image: "/AI2.jpeg", year: "2026" },
 ];
 
 const Events: React.FC = () => {
@@ -30,7 +30,7 @@ const Events: React.FC = () => {
         <motion.div style={{ x }} className="flex gap-16 px-16 relative z-10">
           {/* Header Card */}
            <div className="w-[80vw] md:w-[30vw] shrink-0 flex flex-col justify-end pb-20">
-              <h3 className="text-6xl font-display font-bold text-white mb-6">UPCOMING <br/> <span className="text-turing-yellow">EVENTS</span></h3>
+              <h3 className="text-6xl font-display font-bold text-white mb-6">OUR<br/> <span className="text-turing-yellow">EVENTS</span></h3>
               <p className="text-gray-400 text-lg max-w-md">
                 A selection of upcoming events, workshops and showcases from the club.
               </p>
