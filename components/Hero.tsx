@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { VideoText } from "./ui/video-text";
 
 const Hero: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -11,57 +13,65 @@ const Hero: React.FC = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <div ref={containerRef} className="relative h-screen w-full overflow-hidden bg-turing-black flex items-center justify-center">
-      
-      <video
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        className="absolute inset-0 w-full h-full z-0 opacity-50"
-      >
-        <source src="/video1.mp4" type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 z-0" />
+    
 
-      {/* Background Abstract Elements */}
-      <motion.div 
-        style={{ y, scale, opacity: 0.3 }}
-        className="absolute inset-0 z-0"
-      >
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-turing-yellow rounded-full blur-[128px] mix-blend-screen opacity-20 animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-white rounded-full blur-[150px] mix-blend-overlay opacity-10" />
-      </motion.div>
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4">
+        
+        <RoughNotationGroup show={true}>
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-center mb-4 w-full"
+            >
+               {/* 
+                  VideoText Component for TURING
+                  - Using video1.mp4 
+                  - Black overlay to match theme background
+               */}
+               <VideoText 
+                  text="TURING"
+                  videoSrc="/video1.mp4"
+                  className="h-[25vh] md:h-[40vh] w-full"
+                  overlayColor="#050505" 
+               />
+            </motion.div>
 
-      {/* Main Typography */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full px-4">
-        <motion.div 
-          style={{ y: textY }}
-          className="flex justify-between w-full max-w-6xl px-4"
-        >
-          <motion.p 
-             initial={{ opacity: 0, x: -50 }}
-             animate={{ opacity: 1, x: 0 }}
-             transition={{ delay: 0.5, duration: 0.8 }}
-             className="font-sans text-sm md:text-lg text-gray-400 uppercase tracking-widest max-w-xs"
-          >
-            Defining the future <br/> of digital interaction.
-          </motion.p>
-          
-          <motion.div
-             initial={{ opacity: 0, x: 50 }}
-             animate={{ opacity: 1, x: 0 }}
-             transition={{ delay: 0.5, duration: 0.8 }}
-             className="text-right"
-          >
-             <span className="block font-display text-4xl font-bold text-turing-yellow">EST. 2017</span>
-             <span className="block text-xs uppercase tracking-widest text-gray-500">College Club // Tech Division</span>
-          </motion.div>
-        </motion.div>
+            <motion.div 
+              style={{ y: textY }}
+              className="flex flex-col md:flex-row justify-between w-full max-w-6xl px-4 z-20 mt-8 md:mt-0"
+            >
+              <div className="text-left font-sans text-sm md:text-xl text-stone-300 max-w-sm tracking-wide leading-relaxed">
+                 <p>
+                    Defining the <br/>
+                    <RoughNotation type="underline" color="#FFD700" strokeWidth={2} padding={[0, 2]}>
+                       <span className="text-white font-bold">future</span>
+                    </RoughNotation> of <br/>
+                    <RoughNotation type="highlight" color="#FFD700" multiline={true} padding={[2, 2]} animationDelay={1000} animationDuration={800}>
+                         <span className="text-turing-black px-1 font-bold">digital interaction.</span>
+                    </RoughNotation>
+                 </p>
+              </div>
+              
+              <div className="text-right mt-8 md:mt-0">
+                 <div className="flex flex-col items-end">
+                     <span className="font-display text-5xl md:text-6xl font-bold text-turing-yellow mb-2">
+                        <RoughNotation type="circle" color="white" strokeWidth={2} padding={[10, 10]} animationDelay={1500}>
+                           EST. 2017
+                        </RoughNotation>
+                     </span>
+                     <span className="block text-sm uppercase tracking-[0.2em] text-stone-400 mt-2 border-t border-stone-600 pt-2">
+                        College Club // Tech Division
+                     </span>
+                 </div>
+              </div>
+            </motion.div>
+        </RoughNotationGroup>
       </div>
 
       {/* Scroll Indicator */}
@@ -69,15 +79,12 @@ const Hero: React.FC = () => {
         style={{ opacity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-turing-yellow">Scroll</span>
-        <ArrowDown className="text-white animate-bounce w-5 h-5" />
+        <span className="text-[10px] uppercase tracking-[0.3em] text-turing-yellow font-bold">Scroll to Explore</span>
+        <ArrowDown className="text-turing-yellow animate-bounce w-6 h-6" />
       </motion.div>
       
-      {/* Decorative Lines */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-10 top-0 bottom-0 w-[1px] bg-white/10" />
-        <div className="absolute right-10 top-0 bottom-0 w-[1px] bg-white/10" />
-      </div>
+      {/* Decorative Grid */}
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
     </div>
   );
 };

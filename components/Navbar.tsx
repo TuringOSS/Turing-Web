@@ -15,9 +15,10 @@ const Navbar: React.FC = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-2xl font-display font-bold tracking-tighter"
+        className="flex items-center gap-3 text-2xl font-display font-bold tracking-tighter"
       >
-        TURING<span className="text-turing-yellow">.</span>
+        <img src="/tuning.jpg" alt="Turing Logo" className="h-8 w-8 object-contain rounded-full bg-white"/>
+        <span>TURING<span className="text-turing-yellow">.</span></span>
       </motion.div>
 
       <div className="hidden md:flex gap-8">
