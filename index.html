@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
@@ -43,22 +44,49 @@
           }
         }
       }
+      // Force dark mode initialization
+      if (!('theme' in localStorage) || localStorage.theme === 'dark') {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark');
+      }
     </script>
     <style>
+      :root {
+        --event-bg-1: #ffffff;
+        --event-bg-2: #f9fafb;
+        --event-bg-3: #ffffff;
+        --text-primary: #000000;
+        --text-secondary: #4b5563; /* gray-600 */
+        --grid-color: #e5e5e5;
+        --scrollbar-track: #f1f1f1;
+        --scrollbar-thumb: #c1c1c1;
+      }
+      .dark {
+        --event-bg-1: #050505;
+        --event-bg-2: #111111;
+        --event-bg-3: #050505;
+        --text-primary: #ffffff;
+        --text-secondary: #d1d5db; /* gray-300 */
+        --grid-color: #222222;
+        --scrollbar-track: #050505;
+        --scrollbar-thumb: #333;
+      }
       body {
-        background-color: #050505;
-        color: #ffffff;
+        background-color: var(--event-bg-1);
+        color: var(--text-primary);
         overflow-x: hidden;
+        transition: background-color 0.3s, color 0.3s;
       }
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #050505;
+        background: var(--scrollbar-track);
       }
       ::-webkit-scrollbar-thumb {
-        background: #333;
+        background: var(--scrollbar-thumb);
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {

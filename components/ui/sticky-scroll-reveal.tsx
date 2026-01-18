@@ -40,9 +40,9 @@ export const StickyScroll = ({
   });
 
   const backgroundColors = [
-    "#050505", // turing-black
-    "#111111", // turing-dark
-    "#050505", // turing-black
+    "var(--event-bg-1)",
+    "var(--event-bg-2)",
+    "var(--event-bg-3)",
   ];
   
   const linearGradients = [
@@ -69,7 +69,7 @@ export const StickyScroll = ({
                 }}
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
-                  color: activeCard === index ? "#FFD700" : "#ffffff",
+                  color: activeCard === index ? "#FFD700" : "var(--text-primary)",
                 }}
                 className="text-4xl font-bold font-display uppercase tracking-wide"
               >
@@ -82,7 +82,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-lg text-gray-300 max-w-sm mt-10 font-sans leading-relaxed"
+                className="text-lg text-gray-600 dark:text-gray-300 max-w-sm mt-10 font-sans leading-relaxed"
               >
                 {item.description}
               </motion.p>

@@ -20,18 +20,18 @@ const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
         <motion.div
           animate={{ y: 0 }}
           exit={{ y: "-100%", transition: { duration: 0.8, ease: "easeInOut" } }}
-          className="fixed inset-0 z-[100] bg-turing-black flex flex-col items-center justify-center"
+          className="fixed inset-0 z-[100] bg-white dark:bg-turing-black flex flex-col items-center justify-center transition-colors duration-300"
         >
           <div className="flex flex-col items-center">
              <div className="text-8xl md:text-9xl font-display font-bold text-turing-yellow mb-2 flex items-baseline">
                 <NumberTicker value={100} className="text-turing-yellow" />
                 <span className="text-4xl md:text-6xl ml-1">%</span>
              </div>
-             <p className="text-stone-400 font-mono tracking-widest text-sm uppercase">Initializing Systems</p>
+             <p className="text-stone-600 dark:text-stone-400 font-mono tracking-widest text-sm uppercase transition-colors">Initializing Systems</p>
           </div>
           
           {/* Progress Bar Line */}
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-900">
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200 dark:bg-gray-900 transition-colors">
              <motion.div 
                initial={{ width: "0%" }}
                animate={{ width: "100%" }}

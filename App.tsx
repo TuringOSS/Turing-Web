@@ -5,7 +5,6 @@ import Marquee from './components/Marquee';
 import About from './components/About';
 import Projects from './components/Projects';
 import Team from './components/Team';
-import UpcomingEvents from './components/UpcomingEvents';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import LoadingScreen from './components/LoadingScreen';
@@ -33,7 +32,7 @@ const App: React.FC = () => {
       {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
       
       {!loading && (
-        <div className="bg-turing-black text-white min-h-screen selection:bg-turing-yellow selection:text-black">
+        <div className="bg-white dark:bg-turing-black text-black dark:text-white min-h-screen selection:bg-turing-yellow selection:text-black transition-colors duration-300">
           <CustomCursor />
           
           {/* Progress Bar */}
@@ -49,7 +48,6 @@ const App: React.FC = () => {
             <Marquee text="CODE DESIGN INNOVATE" />
             <About />
             <Projects />
-            <UpcomingEvents />
             <Marquee text="JOIN THE MOVEMENT" reverse />
             <Team />
           </main>

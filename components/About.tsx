@@ -13,9 +13,9 @@ const About: React.FC = () => {
   const words = "We are a collective of visionaries, coders, and designers pushing the boundaries of what is possible in a collegiate environment. Turing isn't just a club; it's a movement.".split(" ");
 
   return (
-    <section id="about" ref={containerRef} className="min-h-screen bg-turing-black text-white py-32 px-6 md:px-12 flex flex-col justify-center relative">
+    <section id="about" ref={containerRef} className="min-h-screen bg-white dark:bg-turing-black text-black dark:text-white py-32 px-6 md:px-12 flex flex-col justify-center relative transition-colors duration-300">
        {/* Background Grid */}
-       <div className="absolute inset-0 bg-[linear-gradient(to_right,#222_1px,transparent_1px),linear-gradient(to_bottom,#222_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
+       <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30 dark:opacity-20 pointer-events-none transition-colors duration-300" />
 
        <div className="max-w-6xl mx-auto w-full z-10">
           <motion.div 

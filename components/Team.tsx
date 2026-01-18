@@ -5,7 +5,7 @@ import { DraggableCardBody, DraggableCardContainer } from './ui/draggable-card';
 
 const coreMembers = [
   { name: "Madhav Jaju", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPbaOBDhz5hfuXwZqIWCSsnFy94QaerOAH7tlN" },
-  { name: "Shobhit Luthra", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPjKSG3p0mdOTG76rLRzK1H3hCwqXpIFyWki5Z4" },
+  { name: "Shobhit Luthra", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPjKSG3p0mdOTG76rLRzK1H3hCwqXpIFyWki5Z" },
   { name: "Paravi Bhatia", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPcnSAe0wDm5dWgzJYZtV9ys1ArXHaETRSLNI2" },
 ];
 
@@ -24,10 +24,10 @@ const leadMembers = [
 
 const CoreCard = ({ member, index }: { member: any, index: number }) => (
     <CardContainer className="inter-var">
-      <CardBody className="bg-turing-black relative group/card border-2 border-turing-yellow w-full h-auto rounded-none p-4 w-[350px]">
+      <CardBody className="bg-turing-black relative group/card border-2 border-turing-yellow w-full h-auto rounded-none p-4 w-[350px] transition-colors duration-300">
         <CardItem
           translateZ="50"
-          className="w-full text-3xl font-display font-bold text-white uppercase italic text-center"
+          className="w-full text-3xl font-display font-bold text-white uppercase italic text-center transition-colors duration-300"
         >
           {member.name}
         </CardItem>
@@ -70,13 +70,13 @@ const LeadCard = ({ member, index }: { member: any, index: number }) => (
 
 const Team: React.FC = () => {
   return (
-    <section id="team" className="bg-white text-turing-black py-32 px-6">
+    <section id="team" className="bg-gray-50 text-black py-32 px-6 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <motion.div
            initial={{ opacity: 0, y: 30 }}
            whileInView={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.6 }}
-           className="mb-20 flex justify-between items-end border-b-2 border-turing-black pb-8"
+           className="mb-20 flex justify-between items-end border-b-2 border-black pb-8 transition-colors duration-300"
         >
           <h2 className="text-6xl md:text-9xl font-display font-bold uppercase tracking-tighter">
             The <br/> Crew
@@ -98,7 +98,7 @@ const Team: React.FC = () => {
 
         {/* LEADS SECTION */}
         <div>
-          <h3 className="text-4xl font-display font-bold uppercase mb-12 border-l-8 border-turing-black pl-4">Team Leads</h3>
+          <h3 className="text-4xl font-display font-bold uppercase mb-12 border-l-8 border-black dark:border-white pl-4 transition-colors duration-300">Team Leads</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
              {leadMembers.map((member, i) => (
               <LeadCard key={i} member={member} index={i} />

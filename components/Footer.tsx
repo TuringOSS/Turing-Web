@@ -3,7 +3,7 @@ import { ArrowUpRight, Github, Instagram, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-turing-black text-white pt-32 pb-12 px-6 border-t border-gray-900">
+    <footer className="bg-white dark:bg-turing-black text-black dark:text-white pt-32 pb-12 px-6 border-t border-gray-200 dark:border-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex flex-col justify-between min-h-[60vh]">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
@@ -13,9 +13,9 @@ const Footer: React.FC = () => {
               <input 
                 type="email" 
                 placeholder="ENTER EMAIL" 
-                className="bg-transparent border-b border-gray-700 py-4 text-xl focus:border-turing-yellow focus:outline-none transition-colors"
+                className="bg-transparent border-b border-gray-300 dark:border-gray-700 py-4 text-xl focus:border-turing-yellow focus:outline-none transition-colors"
               />
-              <button className="self-start mt-4 bg-white text-black px-8 py-3 font-bold uppercase hover:bg-turing-yellow transition-colors flex items-center gap-2">
+              <button className="self-start mt-4 bg-black dark:bg-white text-white dark:text-black px-8 py-3 font-bold uppercase hover:bg-turing-yellow hover:text-black transition-colors flex items-center gap-2">
                 Subscribe <ArrowUpRight size={16} />
               </button>
             </form>

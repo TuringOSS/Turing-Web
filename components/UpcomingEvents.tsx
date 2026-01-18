@@ -9,7 +9,7 @@ const content = [
     content: (
         <div className="h-full w-full bg-turing-black border-2 border-turing-yellow flex flex-col items-center justify-center text-white p-8 relative overflow-hidden group">
             <div className="absolute inset-0 bg-turing-yellow/10 transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-            <h3 className="text-4xl font-display font-bold text-turing-yellow z-10 text-center">HACKATHON<br/>2026</h3>
+            <h3 className="text-4xl font-display font-bold text-turing-yellow z-10 text-center">HACKATHON<br/>2025</h3>
             <div className="mt-4 px-4 py-2 bg-turing-yellow text-turing-black font-bold text-lg z-10 uppercase tracking-widest">
                 Register Now
             </div>
@@ -59,10 +59,10 @@ const content = [
 
 const UpcomingEvents: React.FC = () => {
   return (
-    <div className="py-20 w-full">
+    <div className="py-20 w-full bg-white dark:bg-turing-black transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 mb-10 text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-turing-yellow mb-4">UPCOMING EVENTS</h2>
-            <p className="text-gray-400">Mark your calendars for what's next.</p>
+            <p className="text-gray-600 dark:text-gray-400 transition-colors">Mark your calendars for what's next.</p>
         </div>
       <StickyScroll content={content} />
     </div>
