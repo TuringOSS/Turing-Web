@@ -66,8 +66,8 @@ const Hero: React.FC = () => {
                */}
                <VideoText 
                   text="TURING"
-                  videoSrc="/coding.mp4"
-                  className="h-[25vh] md:h-[40vh]  max-w-4xl mx-auto"
+                  videoSrc="/coding1.mp4"
+                  className="h-[25vh] md:h-[40vh]  max-w-5xl mx-auto"
                />
             </motion.div>
 
