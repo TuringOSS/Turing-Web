@@ -44,6 +44,7 @@ const Events: React.FC = () => {
                   src={project.image} 
                   alt={project.title} 
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40" 
+                  loading="lazy"
                 />
               </div>
               <div className="absolute inset-0 flex flex-col justify-between p-8">

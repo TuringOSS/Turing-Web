@@ -43,6 +43,7 @@ const CoreCard = ({ member, index }: { member: any, index: number }) => (
             src={member.img}
             className="w-full h-72 object-cover transition-all duration-500 rounded-none group-hover/card:shadow-xl"
             alt={member.name}
+            loading="lazy"
           />
         </CardItem>
       </CardBody>
@@ -57,6 +58,7 @@ const LeadCard = ({ member, index }: { member: any, index: number }) => (
           src={member.img}
           alt={member.name}
           className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          loading="lazy"
         />
 
         <div className="absolute inset-0 flex flex-col justify-end p-5 bg-gradient-to-t from-black/90 to-transparent pointer-events-none">

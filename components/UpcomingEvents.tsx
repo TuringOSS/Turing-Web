@@ -27,6 +27,7 @@ const content = [
           src="/Ai.jpeg"
           className="h-full w-full object-cover absolute inset-0 grayscale hover:grayscale-0 transition-all duration-500"
           alt="AI Workshop"
+          loading="lazy"
         />
         <span className="relative z-20 font-display text-3xl font-bold tracking-widest border-b-2 border-turing-yellow pb-2">WORKSHOPS</span>
       </div>
