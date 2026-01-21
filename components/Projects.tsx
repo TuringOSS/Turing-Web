@@ -4,10 +4,10 @@ import { Project } from '../types';
 import { ArrowUpRight } from 'lucide-react';
 
 const events: Project[] = [
-   { id: 1, title: "Hack Night", category: "Hackathon", image: "technex1.jpeg", year: "2025" },
+   { id: 1, title: "Technex 2025", category: "Hackathon", image: "technex1.jpeg", year: "2025" },
   { id: 2, title: "Robo Race", category: "Showcase", image: "/AI2.jpeg", year: "2025" },
   { id: 3, title: "AI Workshop", category: "Workshop", image: "/Ai.jpeg", year: "2024" },
-  { id: 4, title: "TECHNEX", category: "Multi Event Hack", image: "/AI2.jpeg", year: "2026" },
+  { id: 4, title: "Development Workshop", category: "Multi Event Hack", image: "/AI2.jpeg", year: "2026" },
 ];
 
 const Events: React.FC = () => {
