@@ -4,7 +4,7 @@ import { Project } from '../types';
 import { ArrowUpRight } from 'lucide-react';
 
 const events: Project[] = [
-   { id: 1, title: "Hack Night", category: "Hackathon", image: "https://ik.imagekit.io/7rrqeweux1/technex", year: "2025" },
+   { id: 1, title: "Hack Night", category: "Hackathon", image: "technex1.jpeg", year: "2025" },
   { id: 2, title: "Robo Race", category: "Showcase", image: "/AI2.jpeg", year: "2025" },
   { id: 3, title: "AI Workshop", category: "Workshop", image: "/Ai.jpeg", year: "2024" },
   { id: 4, title: "TECHNEX", category: "Multi Event Hack", image: "/AI2.jpeg", year: "2026" },

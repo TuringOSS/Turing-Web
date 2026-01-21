@@ -4,22 +4,22 @@ import { CardBody, CardContainer, CardItem } from './ui/3d-card';
 import { DraggableCardBody, DraggableCardContainer } from './ui/draggable-card';
 
 const coreMembers = [
-  { name: "Madhav Jaju", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPbaOBDhz5hfuXwZqIWCSsnFy94QaerOAH7tlN" },
-  { name: "Shobhit Luthra", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPjKSG3p0mdOTG76rLRzK1H3hCwqXpIFyWki5Z" },
-  { name: "Paravi Bhatia", role: "Core Member", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPcnSAe0wDm5dWgzJYZtV9ys1ArXHaETRSLNI2" },
+  { name: "Madhav Jaju", role: "Core Member", img: "/NMkaju.jpg" },
+  { name: "Shobhit Luthra", role: "Core Member", img: "/NMshobhit.jpg" },
+  { name: "Paravi Bhatia", role: "Core Member", img: "/NMparvi.jpg" },
 ];
 
 const leadMembers = [
-  { name: "Ram Singhal", role: "Design Lead", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPlX5Yl7DIQwkDVPmLnNjbeXCz1YvGTUH4l2cM" },
-  { name: "Disha Goyal", role: "Social Media Lead", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPkM9tA6K0GN9MOFjhmoH8nDCZqxTWEJBf3p2v" },
-  { name: "Pranshu Sharma", role: "Robotics Lead", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPPbuSxZfocTOFKG05dIU1u2fBsq4W96AlDkmv" },
-  { name: "Nancy Khurana", role: "Tech Lead", img: "nancy.jpeg" },
-  { name: "Ojas Kulkarni", role: "Tech Lead", img: "ojas.jpeg" },
-  { name: "Punya Chopra", role: "PR and Sponsorship", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPyOfVMXJz6FZpBtNs8UcuCdWbM4J1PKhyQxrV" },
-  { name: "Dravya Gangwal", role: "PR and Sponsorship", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPKWgKFwmk5DuBj6L2nrHxJfSTzMqX3R9FV0PC" },
+  { name: "Ram Singhal", role: "Design Lead", img: "/Ram Singhal.jpg" },
+  { name: "Disha Goyal", role: "Social Media Lead", img: "/Disha goyal .webp" },
+  { name: "Pranshu Sharma", role: "Robotics Lead", img: "/Pranshu.JPG" },
+  { name: "Nancy Khurana", role: "Tech Lead", img: "/nancy.jpeg" },
+  { name: "Ojas Kulkarni", role: "Tech Lead", img: "/ojas.jpeg" },
+  { name: "Punya Chopra", role: "PR and Sponsorship", img: "/Punya.jpg" },
+  { name: "Dravya Gangwal", role: "PR and Sponsorship", img: "/Dravya Gangwal.jpg" },
   { name: "Dhruv Singh", role: "Development Lead", img: "https://picsum.photos/400/400?random=11" },
-  { name: "Neev Rawlani", role: "Operations", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiPG2CzMUuABJvL5Kpe7qzPuxjw0NZOH9CQ3yhn" },
-  { name: "Arav Naik", role: "Operations", img: "https://ew9vkcsr89.ufs.sh/f/aVOKwHalrRiP984XB4rpHiDo2ftP10dERb4WQ639xAmaOvGN" },
+  { name: "Neev Rawlani", role: "Operations", img: "/neev.jpg" },
+  { name: "Arav Naik", role: "Operations", img: "/Arav Naik.jpg" },
 ];
 
 const CoreCard = ({ member, index }: { member: any, index: number }) => (
