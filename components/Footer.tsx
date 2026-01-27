@@ -32,14 +32,14 @@ const Footer: React.FC = () => {
 
           <div>
              <h3 className="text-sm font-mono text-gray-500 mb-6 uppercase">Socials</h3>
-             <ul className="space-y-4">
+             <ul className="space-y-4 mb-8">
                 {[
-                  { icon: Github, label: "Github" },
-                  { icon: Instagram, label: "Instagram" },
-                  { icon: Twitter, label: "Twitter" }
+                  { icon: Github, label: "Github", link: "https://github.com/TuringOSS" },
+                  { icon: Instagram, label: "Instagram", link: "https://www.instagram.com/turing.club?igsh=d21wN2Z1Z3M4OTI5&utm_source=qr" },
+                  { icon: Twitter, label: "Twitter", link: "#" }
                 ].map((social, i) => (
                   <li key={i}>
-                    <a href="#" className="flex items-center gap-3 hover:text-turing-yellow transition-colors group">
+                    <a href={social.link} target={social.link.startsWith('http') ? "_blank" : "_self"} rel="noopener noreferrer" className="flex items-center gap-3 hover:text-turing-yellow transition-colors group">
                       <social.icon size={20} />
                       <span className="font-bold uppercase">{social.label}</span>
                       <ArrowUpRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
@@ -47,6 +47,11 @@ const Footer: React.FC = () => {
                   </li>
                 ))}
              </ul>
+
+             <h3 className="text-sm font-mono text-gray-500 mb-2 uppercase">Contact</h3>
+             <a href="tel:9752836989" className="text-lg font-bold hover:text-turing-yellow transition-colors">
+               +91 97528 36989
+             </a>
           </div>
         </div>
 

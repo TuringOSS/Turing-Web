@@ -2,21 +2,21 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Project } from '../types';
 import { ArrowUpRight } from 'lucide-react';
-
-const events: Project[] = [
-   { id: 1, title: "Technex 2025", category: "Hackathon", image: "technex1.jpeg", year: "2025" },
-  { id: 2, title: "Robo Race", category: "Showcase", image: "/AI2.jpeg", year: "2025" },
-  { id: 3, title: "AI Workshop", category: "Workshop", image: "/Ai.jpeg", year: "2024" },
-  { id: 4, title: "Development Workshop", category: "Multi Event Hack", image: "/AI2.jpeg", year: "2026" },
-];
+import { useNavigate } from 'react-router-dom';
+import { events } from '../data/events';
 
 const Events: React.FC = () => {
   const targetRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
+
+  const handleEventClick = (id: number) => {
+    navigate(`/events/${id}`);
+  };
 
   return (
     <section id="events" ref={targetRef} className="relative h-[300vh] bg-white dark:bg-turing-black transition-colors duration-300">
@@ -38,7 +38,11 @@ const Events: React.FC = () => {
 
            {/* Project Cards */}
           {events.map((project) => (
-            <div key={project.id} className="group relative w-[85vw] md:w-[45vw] lg:w-[35vw] h-[70vh] shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 transition-all duration-500 hover:border-turing-yellow">
+            <div 
+              key={project.id} 
+              onClick={() => handleEventClick(project.id)}
+              className="group relative w-[85vw] md:w-[45vw] lg:w-[35vw] h-[70vh] shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 transition-all duration-500 hover:border-turing-yellow cursor-pointer"
+            >
               <div className="absolute inset-0">
                 <img 
                   src={project.image} 
@@ -58,7 +62,7 @@ const Events: React.FC = () => {
                 <div className="translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
                   <h4 className="text-5xl font-display font-bold text-black dark:text-white mb-2 transition-colors">{project.title}</h4>
                   <div className="flex items-center gap-2 text-turing-yellow opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <span className="text-sm uppercase tracking-widest font-bold">View Case Study</span>
+                    <span className="text-sm uppercase tracking-widest font-bold">View Details</span>
                     <ArrowUpRight size={16} />
                   </div>
                 </div>

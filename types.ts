@@ -4,6 +4,13 @@ export interface Project {
   category: string;
   image: string;
   year: string;
+  description?: string;
+  details?: {
+    date: string;
+    location: string;
+    participants: string;
+    winners?: string[];
+  };
 }
 
 export interface Member {

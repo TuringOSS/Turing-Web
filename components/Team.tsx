@@ -5,8 +5,8 @@ import { DraggableCardBody, DraggableCardContainer } from './ui/draggable-card';
 
 const coreMembers = [
   { name: "Madhav Jaju", role: "Core Member", img: "/NMkaju.jpg" },
-  { name: "Shobhit Luthra", role: "Core Member", img: "/NMshobhit.jpg" },
   { name: "Paravi Bhatia", role: "Core Member", img: "/NMparvi.jpg" },
+  { name: "Shobhit Luthra", role: "Core Member", img: "/NMshobhit.jpg" },
 ];
 
 const leadMembers = [

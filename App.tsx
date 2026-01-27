@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Marquee from './components/Marquee';
-import About from './components/About';
-import Projects from './components/Projects';
-import Team from './components/Team';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import LoadingScreen from './components/LoadingScreen';
+import Home from './components/Home';
+import EventDetails from './components/EventDetails';
 import { motion, useScroll, useSpring } from 'framer-motion';
+import { Routes, Route } from 'react-router-dom';
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -43,14 +41,10 @@ const App: React.FC = () => {
     
           <Navbar />
           
-          <main>
-            <Hero />
-            <Marquee text="CODE DESIGN INNOVATE" />
-            <About />
-            <Projects />
-            <Marquee text="JOIN THE MOVEMENT" reverse />
-            <Team />
-          </main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/events/:id" element={<EventDetails />} />
+          </Routes>
     
           <Footer />
         </div>
