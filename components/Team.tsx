@@ -16,10 +16,10 @@ const leadMembers = [
   { name: "Pranshu Sharma", role: "Robotics Lead", img: "/Pranshu.JPG" },
   { name: "Nancy Khurana", role: "Tech Lead", img: "/nancy.jpeg" },
   { name: "Ojas Kulkarni", role: "Tech Lead", img: "/ojas.jpeg" },
-  { name: "Punya Chopra", role: "PR and Sponsorship", img: "/Punya.jpg" },
-  { name: "Dravya Gangwal", role: "PR and Sponsorship", img: "/Dravya Gangwal.jpg" },
-  { name: "Neev Rawlani", role: "Operations", img: "/neev.jpg" },
-  { name: "Arav Naik", role: "Operations", img: "/Arav Naik.jpg" },
+  { name: "Punya Chopra", role: "PR and Sponsorship Lead", img: "/Punya.jpg" },
+  { name: "Dravya Gangwal", role: "PR and Sponsorship Lead", img: "/Dravya Gangwal.jpg" },
+  { name: "Neev Rawlani", role: "Operations Lead", img: "/neev.jpg" },
+  { name: "Arav Naik", role: "Operations Lead", img: "/AravNaik.jpeg" },
 ];
 
 const CoreCard = ({ member, index }: { member: any, index: number }) => (
