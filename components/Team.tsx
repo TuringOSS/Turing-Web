@@ -10,6 +10,7 @@ const coreMembers = [
 ];
 
 const leadMembers = [
+  { name: "Dhruv Singh", role: "Development Lead (Papa) ", img: "/GigaChad.jpeg" },
   { name: "Ram Singhal", role: "Design Lead", img: "/Ram Singhal.jpg" },
   { name: "Disha Goyal", role: "Social Media Lead", img: "/Disha goyal .webp" },
   { name: "Pranshu Sharma", role: "Robotics Lead", img: "/Pranshu.JPG" },
@@ -17,7 +18,6 @@ const leadMembers = [
   { name: "Ojas Kulkarni", role: "Tech Lead", img: "/ojas.jpeg" },
   { name: "Punya Chopra", role: "PR and Sponsorship", img: "/Punya.jpg" },
   { name: "Dravya Gangwal", role: "PR and Sponsorship", img: "/Dravya Gangwal.jpg" },
-  { name: "Dhruv Singh", role: "Development Lead", img: "https://picsum.photos/400/400?random=11" },
   { name: "Neev Rawlani", role: "Operations", img: "/neev.jpg" },
   { name: "Arav Naik", role: "Operations", img: "/Arav Naik.jpg" },
 ];
@@ -61,7 +61,7 @@ const LeadCard = ({ member, index }: { member: any, index: number }) => (
           loading="lazy"
         />
 
-        <div className="absolute inset-0 flex flex-col justify-end p-5 bg-gradient-to-t from-black/90 to-transparent pointer-events-none">
+        <div className="absolute inset-0 flex flex-col justify-end p-5 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
           <h3 className="text-xl md:text-2xl font-display font-bold text-white uppercase italic">{member.name}</h3>
           <p className="text-turing-yellow font-mono text-xs md:text-sm uppercase mt-1">{member.role}</p>
         </div>

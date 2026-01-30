@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex items-center gap-3 text-2xl font-display font-bold tracking-tighter"
+        className="flex items-center gap-3 text-2xl font-display font-bold tracking-tighter relative z-50"
       >
         <img src="/tuning.jpg" alt="Turing Logo" className="h-8 w-8 object-contain rounded-full"/>
         <span>TURING<span className="text-turing-yellow">.</span></span>
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
         <AnimatedThemeToggler />
       </div>
 
-      <div className="md:hidden">
+      <div className="md:hidden relative z-50">
         <button onClick={toggleMenu} className="focus:outline-none">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -50,19 +50,21 @@ const Navbar: React.FC = () => {
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 bg-white dark:bg-turing-black z-40 flex flex-col items-center justify-center gap-8 text-black dark:text-white"
+          className="fixed inset-0 bg-white dark:bg-turing-black z-40 flex flex-col items-center justify-start pt-32 gap-8 text-black dark:text-white"
         >
           {links.map((link) => (
             <a 
               key={link} 
               href={`#${link.toLowerCase()}`} 
               onClick={toggleMenu}
-              className="text-4xl font-display font-bold uppercase hover:text-turing-yellow transition-colors"
+              className="text-2xl font-display font-bold uppercase hover:text-turing-yellow transition-colors"
             >
               {link}
             </a>
           ))}
-          <AnimatedThemeToggler />
+          <div className="scale-75">
+            <AnimatedThemeToggler />
+          </div>
         </motion.div>
       )}
     </nav>
