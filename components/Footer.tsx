@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
             TURING
           </h1>
           <p className="text-gray-600 font-mono text-xs mt-4 md:mt-0">
-            © 2024 TURING CLUB. ALL RIGHTS RESERVED.
+            © 2026 TURING CLUB. ALL RIGHTS RESERVED.
           </p>
         </div>
       </div>

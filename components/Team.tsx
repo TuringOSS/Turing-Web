@@ -10,7 +10,7 @@ const coreMembers = [
 ];
 
 const leadMembers = [
-  { name: "Dhruv Singh", role: "Development Lead (Papa) ", img: "/GigaChad.jpeg" },
+  { name: "Dhruv Singh", role: "Development Lead ", img: "/GigaChad.jpeg" },
   { name: "Ram Singhal", role: "Design Lead", img: "/Ram Singhal.jpg" },
   { name: "Disha Goyal", role: "Social Media Lead", img: "/Disha goyal .webp" },
   { name: "Pranshu Sharma", role: "Robotics Lead", img: "/Pranshu.JPG" },
