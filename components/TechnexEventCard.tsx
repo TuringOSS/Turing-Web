@@ -1,9 +1,8 @@
-import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
-import { Clock, Plus, Zap } from "lucide-react";
+import { Plus, Zap } from "lucide-react";
 
 interface ComponentProps {
   name?: string;
@@ -24,16 +23,6 @@ export default function TechnexEventCard({
   registerLink = "https://technex.co.in",
   className,
 }: ComponentProps) {
-  // Derive a local clock text once per minute
-  const timeText = useMemo(() => {
-    const now = new Date();
-    const h = now.getHours();
-    const m = now.getMinutes().toString().padStart(2, "0");
-    const hour12 = ((h + 11) % 12) + 1;
-    const ampm = h >= 12 ? "PM" : "AM";
-    return `${hour12}:${m}${ampm}`;
-  }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 8 }}
@@ -64,10 +53,6 @@ export default function TechnexEventCard({
             <div className="flex items-center gap-2">
               <span className={cn("inline-block h-2.5 w-2.5 rounded-full animate-pulse", statusColor)} />
               <span className="select-none">{statusText}</span>
-            </div>
-            <div className="flex items-center gap-2 opacity-80">
-              <Clock className="h-4 w-4" />
-              <span className="tabular-nums">{timeText}</span>
             </div>
           </div>
 
