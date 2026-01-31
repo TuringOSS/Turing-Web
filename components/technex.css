@@ -1,0 +1,146 @@
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    color: #ffee00;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .hero-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    pointer-events: none;
+    width: 100%;
+  }
+  
+  .hero-title {
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1;
+    mix-blend-mode: normal;
+    text-transform: uppercase;
+    color: #FFD700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+  }
+  
+  .hero-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    opacity: 0.8;
+  }
+  
+  .side-menu {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .menu-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .menu-icon span {
+    width: 100%;
+    height: 2px;
+    background: #c2ad32;
+  }
+  
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    letter-spacing: 0.2em;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  
+  .scroll-progress {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .scroll-text {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #f8f6ec;
+  }
+  
+  .progress-track {
+    width: 100px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+  }
+  
+  .progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #c2ae3c;
+  }
+  
+  .section-counter {
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: #cbb745;
+  }
+  
+  .scroll-sections {
+    position: relative;
+    z-index: 0;
+  }
+  
+  .content-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Content is actually fixed, these just provide scroll space */
+  }
