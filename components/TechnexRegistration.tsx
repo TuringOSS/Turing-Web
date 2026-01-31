@@ -650,13 +650,13 @@ const TechnexRegistration = () => {
       {/* Side menu */}
       <div 
         ref={menuRef} 
-        className="side-menu cursor-pointer z-50 hover:scale-110 transition-transform duration-300" 
+        className="fixed top-8 left-8 flex flex-col items-center gap-8 cursor-pointer z-50 hover:scale-110 transition-transform duration-300" 
         onClick={() => navigate('/')}
       >
-        <div className="menu-icon">
-          <span className="bg-turing-yellow"></span>
-          <span className="bg-turing-yellow"></span>
-          <span className="bg-turing-yellow"></span>
+        <div className="flex flex-col justify-between w-[30px] h-[20px]">
+          <span className="w-full h-[2px] bg-turing-yellow"></span>
+          <span className="w-full h-[2px] bg-turing-yellow"></span>
+          <span className="w-full h-[2px] bg-turing-yellow"></span>
         </div>
         <div className="vertical-text text-turing-yellow font-bold">BACK</div>
       </div>
