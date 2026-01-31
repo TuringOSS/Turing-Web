@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   const handleFolderClick = (index: number) => {
     // Navigate if the paper with logo (index 2) or middle paper is clicked
     if (index === 2 || index === 1 || index ===3 || index ===0 ) {
-      window.open('https://www.turingnm.com/technex-2026', '_blank');
+      navigate('/technex-2026');
     }
   };
 

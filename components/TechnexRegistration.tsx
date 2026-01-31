@@ -676,7 +676,7 @@ const TechnexRegistration = () => {
           </p>
 
           <button
-                onClick={() => window.open('https://www.turingnm.com/technex-events', '_blank')}
+                onClick={'/technex-events'}
                 className="mt-10 pointer-events-auto relative z-50 px-4 py-3 text-xl bg-black border-turing-yellow text-turing-yellow hover:shadow-[4px_4px_0px_0px_rgba(255,215,0,1)] hover:bg-black dark:hover:shadow-[4px_4px_0px_0px_rgba(255,215,0,1)] min-w-[220px]"
           >
               View All Events
