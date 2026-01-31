@@ -23,6 +23,11 @@ const App: React.FC = () => {
     restDelta: 0.001
   });
 
+  // Reset scroll on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   // Smooth scroll behavior with Lenis
   useEffect(() => {
     const lenis = new Lenis({
@@ -81,4 +86,4 @@ const App: React.FC = () => {
   );
 }
 
-export default App; // Force reload 
+export default App; // Force reload
