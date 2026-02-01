@@ -61,11 +61,12 @@ export const DraggableCardBody = ({
     // Update constraints when component mounts or window resizes
     const updateConstraints = () => {
       if (typeof window !== "undefined") {
+        const isMobile = window.innerWidth < 768;
         setConstraints({
-          top: -window.innerHeight / 2,
-          left: -window.innerWidth / 2,
-          right: window.innerWidth / 2,
-          bottom: window.innerHeight / 2,
+          top: isMobile ? -50 : -window.innerHeight / 2,
+          left: isMobile ? -50 : -window.innerWidth / 2,
+          right: isMobile ? 50 : window.innerWidth / 2,
+          bottom: isMobile ? 50 : window.innerHeight / 2,
         });
       }
     };

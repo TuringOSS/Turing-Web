@@ -53,7 +53,7 @@ const CoreCard = ({ member, index }: { member: any, index: number }) => (
 const LeadCard = ({ member, index }: { member: any, index: number }) => (
   <div className="w-full max-w-[280px]">
     <DraggableCardContainer className="w-full h-full">
-      <DraggableCardBody className="w-[280px] h-[340px] bg-turing-black border-2 border-turing-black p-0 rounded-none overflow-hidden group">
+      <DraggableCardBody className="w-[240px] sm:w-[280px] h-[340px] bg-turing-black border-2 border-turing-black p-0 rounded-none overflow-hidden group">
         <img
           src={member.img}
           alt={member.name}
@@ -72,7 +72,7 @@ const LeadCard = ({ member, index }: { member: any, index: number }) => (
 
 const Team: React.FC = () => {
   return (
-    <section id="team" className="bg-gray-50 text-black py-32 px-6 transition-colors duration-300">
+    <section id="team" className="bg-gray-50 text-black py-32 px-6 transition-colors duration-300 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
            initial={{ opacity: 0, y: 30 }}
