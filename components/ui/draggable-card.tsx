@@ -61,12 +61,15 @@ export const DraggableCardBody = ({
     // Update constraints when component mounts or window resizes
     const updateConstraints = () => {
       if (typeof window !== "undefined") {
+        // Much stricter constraints to prevent layout shifting
         const isMobile = window.innerWidth < 768;
+        const limit = isMobile ? 20 : 100; // 20px on mobile, 100px on desktop
+        
         setConstraints({
-          top: isMobile ? -50 : -window.innerHeight / 2,
-          left: isMobile ? -50 : -window.innerWidth / 2,
-          right: isMobile ? 50 : window.innerWidth / 2,
-          bottom: isMobile ? 50 : window.innerHeight / 2,
+          top: -limit,
+          left: -limit,
+          right: limit,
+          bottom: limit,
         });
       }
     };
@@ -109,47 +112,24 @@ export const DraggableCardBody = ({
       ref={cardRef}
       drag
       dragConstraints={constraints}
+      dragElastic={0.05} // Very low elasticity to prevent pulling far beyond constraints
       onDragStart={() => {
         document.body.style.cursor = "grabbing";
       }}
-      onDragEnd={(event, info) => {
+      onDragEnd={() => {
         document.body.style.cursor = "default";
 
         controls.start({
           rotateX: 0,
           rotateY: 0,
+          x: 0,
+          y: 0,
           transition: {
             type: "spring",
-            ...springConfig,
+            stiffness: 250,
+            damping: 25,
+            mass: 0.5,
           },
-        });
-        const currentVelocityX = velocityX.get();
-        const currentVelocityY = velocityY.get();
-
-        const velocityMagnitude = Math.sqrt(
-          currentVelocityX * currentVelocityX +
-            currentVelocityY * currentVelocityY,
-        );
-        const bounce = Math.min(0.8, velocityMagnitude / 1000);
-
-        animate(info.point.x, info.point.x + currentVelocityX * 0.3, {
-          duration: 0.8,
-          ease: [0.2, 0, 0, 1],
-          bounce,
-          type: "spring",
-          stiffness: 50,
-          damping: 15,
-          mass: 0.8,
-        });
-
-        animate(info.point.y, info.point.y + currentVelocityY * 0.3, {
-          duration: 0.8,
-          ease: [0.2, 0, 0, 1],
-          bounce,
-          type: "spring",
-          stiffness: 50,
-          damping: 15,
-          mass: 0.8,
         });
       }}
       style={{
