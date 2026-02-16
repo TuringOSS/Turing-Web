@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
                  <div className="flex flex-col items-end">
                      <span className="font-display text-5xl md:text-6xl font-bold text-turing-yellow mb-2">
                         <RoughNotation type="circle" color="#FFD700" strokeWidth={2} padding={[10, 10]} animationDelay={1500}>
-                           EST. 2017
+                           EST. 2018
                         </RoughNotation>
                      </span>
                      <span className="block text-sm uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400 mt-2 border-t border-stone-200 dark:border-stone-600 pt-2 transition-colors">
