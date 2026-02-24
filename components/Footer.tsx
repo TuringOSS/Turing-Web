@@ -49,9 +49,11 @@ const Footer: React.FC = () => {
              </ul>
 
              <h3 className="text-sm font-mono text-gray-500 mb-2 uppercase">Contact</h3>
-             <a href="tel:9752836989" className="text-lg font-bold hover:text-turing-yellow transition-colors">
-               +91 97528 36989
-             </a>
+             <div className="text-lg font-bold hover:text-turing-yellow transition-colors flex flex-col">
+               <a href="tel:9752836989">+91 97528 36989</a>
+               <a href="tel:9109610144">+91 91096 10144</a>
+               <a href="tel:7489499999">+91 74894 99999</a>
+             </div>
           </div>
         </div>
 
