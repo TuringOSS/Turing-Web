@@ -114,7 +114,7 @@ const TechnexEvents = () => {
     {
       name: "The Vault",
       role: "Mystery Event",
-      registerLink: "https://unstop.com/o/PvwbsRQ?lb=sEvx6pe&utm_medium=Share&utm_source=turinclu6155&utm_campaign=Competitions",
+      registerLink: "https://unstop.com/o/UYyrnaO?lb=sEvx6pe&utm_medium=Share&utm_source=turinclu6155&utm_campaign=Competitions",
       statusText: "Registration Open",
       statusColor: "bg-turing-yellow",
       glowText: "Mystery Event"
